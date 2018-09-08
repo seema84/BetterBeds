@@ -4,6 +4,8 @@ import java.lang.reflect.Method;
 import java.util.*;
 import java.util.logging.Level;
 
+import com.earth2me.essentials.Essentials;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.World;
 import org.bukkit.World.Environment;
@@ -320,30 +322,13 @@ public class BetterBeds extends JavaPlugin implements Listener {
 	 * @param Player
 	 * @return boolean - True if Player is currently AFK
 	 */
+
+	private static Essentials ess = (Essentials) Bukkit.getServer().getPluginManager().getPlugin("Essentials");
+
 	private boolean isPlayerAFK(Player p) {
-		ClassLoader classLoader = BetterBeds.class.getClassLoader();
 
-		// Check if the player is AFK, according to WhosAFK
-		try {
-			// Load the WhosAFK class and it's playerIsAFK(Player) method
-			Class<?> WhosAFK = classLoader.loadClass("whosafk.WhosAFK");
-			Method whosafkPlayerIsAFK = WhosAFK.getMethod("playerIsAFK", Player.class);
+		return ess.getUser(p) != null && ess.getUser(p).isAfk();
 
-			// Get the instance of WhosAFK being used by spigot
-			@SuppressWarnings({ "unchecked", "rawtypes" })
-			JavaPlugin whosafk = JavaPlugin.getPlugin((Class) WhosAFK);
-
-			// Finally, check if WhosAFK thinks the player is AFK
-			if (whosafk.isEnabled() && (Boolean) whosafkPlayerIsAFK.invoke(whosafk, p))
-				return true;
-		} catch (ClassNotFoundException e) {
-			// WhosAFK is not installed, no need to panic
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		// Default to not AFK
-		return false;
 	}
 
 	/**

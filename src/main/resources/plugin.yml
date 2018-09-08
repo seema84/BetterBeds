@@ -5,6 +5,7 @@ description: ${project.description}
 author: Phoenix616
 authors: [NeoTiger]
 website: https://github.com/Phoenix616/BetterBeds/
+depend: [Essentials]
 commands:
    betterbedsreload:
       aliases: [bbreload]
