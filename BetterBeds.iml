@@ -28,42 +28,6 @@
     <orderEntry type="library" name="Maven: org.avaje:ebean:2.8.1" level="project" />
     <orderEntry type="library" name="Maven: javax.persistence:persistence-api:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.14" level="project" />
-    <orderEntry type="library" name="Maven: net.ess3:EssentialsX:2.0.1" level="project" />
-    <orderEntry type="module-library">
-      <library name="Maven: BOSEconomy:BOSEconomy:v0.7.8.1">
-        <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/BOSEconomy/BOSEconomy/v0.7.8.1/BOSEconomy-v0.7.8.1.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="Maven: iConomy:iConomy5:5">
-        <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/iConomy/iConomy5/5/iConomy5-5.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="Maven: iConomy:iConomy6:6">
-        <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/iConomy/iConomy6/6/iConomy6-6.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="Maven: MultiCurrency:MultiCurrency:2.2">
-        <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/MultiCurrency/MultiCurrency/2.2/MultiCurrency-2.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="Maven: net.ess3:Essentials:2.13.1" level="project" />
   </component>
 </module>
