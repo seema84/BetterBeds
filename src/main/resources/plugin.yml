@@ -2,6 +2,7 @@ name: ${project.name}
 main: de.themoep.BetterBeds.BetterBeds
 version: '${minecraft.plugin.version}'
 description: ${project.description}
+api-version: 1.17
 author: Phoenix616
 authors: [NeoTiger]
 website: https://github.com/Phoenix616/BetterBeds/
