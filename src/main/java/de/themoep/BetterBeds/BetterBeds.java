@@ -5,6 +5,7 @@ import java.util.*;
 import java.util.logging.Level;
 
 import com.earth2me.essentials.Essentials;
+import net.ess3.api.events.AfkStatusChangeEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.World;
@@ -372,4 +373,13 @@ public class BetterBeds extends JavaPlugin implements Listener {
         }
         return pList;
     }
+
+	@EventHandler
+	public void onAfkChange(AfkStatusChangeEvent event) {
+	    // get world
+	    World world = event.getAffected().getBase().getWorld();
+	
+	    // check countQualifyingPlayers
+	    this.checkPlayers(world, false);
+}
 }
